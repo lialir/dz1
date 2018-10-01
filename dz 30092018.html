@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+
+<!--
+<script>
+// 1) Дан код: Почему код даёт именно такие результаты?
+var a = 1, b = 1, c, d;
+c = ++a; alert(c); // 2  a=a+1=1+1=2, c=a=2  
+d = b++; alert(d); // 1   d=b=1, b=b+1=1+1=2
+c = (2+ ++a); alert(c); // 5  a=a+1=2+1=3,  c=2+a=2+3=5
+d = (2+ b++); alert(d); // 4  d=2+b=2+2=4,  b=b+1=2+1=3 
+alert(a); // 3
+alert(b); // 3
+</script>
+-->
+
+<!--
+<script>
+//2) Чему будет равен x в примере ниже?
+var a = 2;
+var x = 1 + (a *= 2); //a=a*2=2*2=4, x=1+a=1+4=5
+alert("a=" + a);
+alert("x=" + x);
+</script>
+-->
+
+<!-- 3) Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
+* если a и b положительные, вывести их разность;
+* если а и b отрицательные, вывести их произведение;
+* если а и b разных знаков, вывести их сумму;
+ноль можно считать положительным числом.-->
+<script>
+var a=parseInt(Math.random()*(100 - (-100)) + (-100));
+alert("первое число от (-100 до 100) =" + a); 
+var b=parseInt(Math.random()*(100 - (-100)) + (-100));
+alert("второе число от (-100 до 100) =" + b);
+
+if (a>=0 && b>=0) {
+	var c=a-b;
+	alert("разность " + c);
+}
+else if (a<0 && b<0) {
+	var c=a*b;
+	alert("произведение " +c);
+}
+else{
+	var c=a+b;
+	alert("сумма " +c);
+}
+
+</script>
+
+
+
+<!-- 4) Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15 -->
+<script>
+var a=parseInt(Math.random()*(15));
+//var a=+prompt ("a")
+alert("вывод начнётся с " + a); 
+switch (a) {
+	case 0:{
+		document.write (0+' ');
+	}
+	case 1:{
+		document.write (1+' ');
+	}
+	case 2:{
+		document.write (2+' ');
+	}
+	case 3:{
+		document.write (3+' ');
+	}
+	case 4:{
+		document.write (4+' ');
+	}
+	case 5:{
+		document.write (5+' ');
+	}
+	case 6:{
+		document.write (6+' ');
+	}
+	case 7:{
+		document.write (7+' ');
+	}
+	case 8:{
+		document.write (8+' ');
+	}
+	case 9:{
+		document.write (9+' ');
+	}
+	case 10:{
+		document.write (10+' ');
+	}
+	case 11:{
+		document.write (11+' ');
+	}
+	case 12:{
+		document.write (12+' ');
+	}
+	case 13:{
+		document.write (13+' ');
+	}
+	case 14:{
+		document.write (14+' ');
+	}
+	case 15:{
+		document.write (15+' ');
+	}
+}
+</script>
+
+<!-- 5) Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.-->
+<script>
+
+function addition(a, b) {
+    return a + b;
+}
+
+function subtraction(a, b) {
+   	return a - b;
+}
+
+function division (a, b) {
+   	return a / b;
+}
+
+function multiplication (a, b) {
+   	return a * b;
+}
+
+var a=+prompt ("a");
+var b=+prompt ("b");
+var s;
+s = addition(a,b);
+alert("addition " + s); 
+s = subtraction(a,b);
+alert('subtraction '+ s); 
+s = division(a,b);
+alert("division "+ s); 
+s = multiplication(a,b);
+alert("multiplication " + s); 
+
+
+/*--6) Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).*/
+function mathOperation(arg1, arg2, operation){
+	switch(operation){
+       	case 'addition':
+       		var s =addition(a,b);
+       		return s; 
+           	break;
+       	 case 'subtraction':
+           	var s =subtraction(a,b);
+       		return s; 
+           	break;
+         case 'division':
+            var s =division(a,b);
+       		return s; 
+           	break;
+       	 case 'multiplication':
+           	var s =multiplication(a,b);
+       		return s; 
+           	break;
+   				}
+}
+
+var x;
+x=mathOperation(a, b, 'addition');
+alert(" mathOperation addition " + x); 
+x=mathOperation(a, b, 'subtraction');
+alert("mathOperation subtraction " + x); 
+x=mathOperation(a, b, 'division');
+alert("mathOperation division " + x); 
+x=mathOperation(a, b, 'multiplication');
+alert("mathOperation multiplication " + x); 
+</script>
+
+
+</head>
+<body>
+
+	ТЕКСТ
+
+</body>
