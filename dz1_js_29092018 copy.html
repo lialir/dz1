@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+
+
+<!--1) Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах по Фаренгейту. Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc – температура по Цельсию-->
+
+<script>
+var Tc=prompt("Введите t в °C")
+alert("t°C="+ Tc);
+var Tf = (9 / 5) * Tc + 32;
+alert(Tc+ " °C = "+ Tf + " °F");
+</script>
+
+
+<!--2) Работа с переменными.-->
+
+<script>
+var a=prompt("Введите a")
+var b=prompt("Введите b")
+alert("a="+ a + "   b="+ b); 
+a=parseInt(a) + parseInt(b)
+b=a-b;
+a=a-b;
+alert("a="+ a + "   b="+ b); 
+</script>
+
+
+<!--3) Объявить две переменные: admin и name. Записать в name строку "Василий"; Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»).-->
+
+<script>
+var admin, name;
+name="Василий";
+admin=name;
+alert(admin);
+</script>
+
+
+</head>
+<body>
+
+	ТЕКСТ
+
+</body>
+
